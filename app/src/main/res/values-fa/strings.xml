@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">نوت های من</string>
+
+    <string name="addingnewnoteText">یادداشت جدید</string>
+    <string name="title">موضوع</string>
+    <string name="description">توضیحات</string>
+    <string name="emptystartingnote">برای شروع یک یادداشت بسازید</string>
+</resources>

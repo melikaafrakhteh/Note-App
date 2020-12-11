@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Note app</string>
+
+    <string name="addingnewnoteText">New Note</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="emptystartingnote">Add a task to get started</string>
 </resources>
