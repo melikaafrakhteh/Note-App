@@ -5,4 +5,6 @@
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="emptystartingnote">Add a task to get started</string>
+    <string name="adingnotetoast">Note Added</string>
+    <string name="notadingnotetoast">Note can not added</string>
 </resources>

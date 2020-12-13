@@ -53,10 +53,11 @@ class DBManager {
     }
 
     // get all notes and show them
-    fun Query(projection:Array<String> ,selection:String , selectionArgs:Array<String> ,sortOrder:String):Cursor{
-        val qb = SQLiteQueryBuilder()
+
+    fun  Query(projection:Array<String>,selection:String,selectionArgs:Array<String>,sorOrder:String):Cursor{
+        val qb=SQLiteQueryBuilder()
         qb.tables = tableName
-        val cursor =qb.query(sqlDB,projection,selection,selectionArgs,null,null,date)
+        val cursor=qb.query(sqlDB,projection,selection,selectionArgs,null,null,sorOrder)
         return cursor
     }
 
@@ -70,5 +71,12 @@ class DBManager {
     fun Update(values: ContentValues,selection: String,selectionArgs: Array<String>):Int{
         val updt = sqlDB?.update(tableName,values,selection,selectionArgs)
         return updt!!
+    }
+
+    //number of notes
+    fun count():Int{
+        val count = " SELECT * FROM $tableName"
+        val cursor:Cursor =sqlDB!!.rawQuery(count,null)
+        return cursor.count
     }
 }

@@ -25,10 +25,20 @@
         <action
             android:id="@+id/action_addingNewNoteFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <argument
+            android:name="titleedit"
+            app:argType="string" />
+        <argument
+            android:name="desedit"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/emptyNoteFragment"
         android:name="com.afrakhteh.noteapp.EmptyNoteFragment"
         android:label="fragment_empty_note"
-        tools:layout="@layout/fragment_empty_note" />
+        tools:layout="@layout/fragment_empty_note" >
+        <action
+            android:id="@+id/action_emptyNoteFragment_to_addingNewNoteFragment"
+            app:destination="@id/addingNewNoteFragment" />
+    </fragment>
 </navigation>
