@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">Note app</string>
-
     <string name="addingnewnoteText">New Note</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="emptystartingnote">Add a task to get started</string>
     <string name="adingnotetoast">Note Added</string>
     <string name="notadingnotetoast">Note can not added</string>
+    <string name="search">Search</string>
+    <string name="deletemsg">this note is deleted</string>
+    <string name="deletealert">Delete!</string>
+    <string name="alertdes">Are you Sure You Want To Delete?</string>
+    <string name="i_am_sure">I am sure</string>
+    <string name="no">No</string>
+    <string name="serchinghint">Search Note</string>
+    <string name="editTitleText">Edit Note</string>
 </resources>

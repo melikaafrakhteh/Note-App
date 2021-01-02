@@ -6,4 +6,14 @@
     <string name="title">موضوع</string>
     <string name="description">توضیحات</string>
     <string name="emptystartingnote">برای شروع یک یادداشت بسازید</string>
+    <string name="adingnotetoast">یادداشت اضافه شد</string>
+    <string name="notadingnotetoast">یادداشت اضافه نشد</string>
+    <string name="search">جستجو</string>
+    <string name="deletemsg">این یادداشت حذف شد</string>
+    <string name="deletealert"> حذف </string>
+    <string name="alertdes">آیا تمایل به حذف این یادداشت دارید؟</string>
+    <string name="i_am_sure">بله مطمینم</string>
+    <string name="no">خیر</string>
+    <string name="serchinghint">جستجوی یادداشت</string>
+    <string name="editTitleText">ویرایش یادداشت</string>
 </resources>

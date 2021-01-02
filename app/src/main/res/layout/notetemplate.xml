@@ -53,7 +53,7 @@
                 android:id="@+id/imagebtn_cardtemplate_delete"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="24dp"
                 android:layout_marginBottom="16dp"
                 android:background="@color/nearWhite"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +64,7 @@
                 android:id="@+id/imagebtn_cardtemplate_edit"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="44dp"
                 android:layout_marginBottom="16dp"
                 android:background="@color/nearWhite"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -78,11 +78,24 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="16dp"
                 android:padding="6dp"
-                android:text="21/3/134"
+                tools:text="21/3/134"
                 android:textColor="@color/yellow"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imagebtn_cardtemplate_share"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:padding="2dp"
+                android:layout_marginEnd="52dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/nearWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imagebtn_cardtemplate_edit"
+                app:srcCompat="@drawable/ic_share_black_24dp"  />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

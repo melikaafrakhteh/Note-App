@@ -7,74 +7,67 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.database.sqlite.SQLiteQueryBuilder
 
-class DBManager {
-    var dbName = "notedatabase"
-    var tableName = "notetable"
-    var dbVersion = 1
+class DBManager{
+    val dbName = "NoteDB"
+    val tableName = "NoteTbl"
+    val dbVersion = 1
 
-    var id = "ID"
-    var title = "TITLE"
-    var description = "DESCRIPTION"
-    var date = "DATE"
+    val id = "ID"
+    val Title = "TITLE"
+    val Description = "DESCRIPTION"
+    val Date = "DATE"
 
-    var sqlDB: SQLiteDatabase? = null
-    var creatingTable = "CREATE TABLE IF NOT EXISTS $tableName (" +
-            id + "INTEGER PRIMARY KEY," +
-            title + "TEXT," +
-            description + "Text," +
-            date + "Text)"
+    var sqlDB:SQLiteDatabase? = null
+    val createTable = " CREATE TABLE IF NOT EXISTS $tableName ( " +
+                      id + " INTEGER PRIMARY KEY, "+
+                      Title+ " TEXT, "+
+                      Description + " TEXT, "+
+                      Date + " TEXT )"
 
-    constructor(context: Context) {
-        var db = sqlliteNote(context)
-        sqlDB = db.writableDatabase
+    constructor(context: Context){
+        val db = sqlliteNote(context)
+         sqlDB =db.writableDatabase
     }
 
     inner class sqlliteNote : SQLiteOpenHelper {
-        var context: Context
-
-        constructor(context: Context) : super(context, dbName, null, dbVersion) {
+        var context:Context
+        constructor(context: Context):super(context,dbName,null,dbVersion){
             this.context = context
         }
-
         override fun onCreate(db: SQLiteDatabase?) {
-            db?.execSQL(creatingTable)
+           db?.execSQL(createTable)
+
         }
 
         override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-            db?.execSQL(" DROP TABLE IF EXISTS $tableName")
+            db?.execSQL("DROP TABLE IF EXISTS $tableName")
         }
 
     }
-
-    //Insert Data
+    // adding a new note
     fun Insert(values:ContentValues):Long{
-        val id = sqlDB?.insert(tableName, "",values)
+        val id = sqlDB?.insert(tableName,"",values)
         return id!!
     }
-
-    // get all notes and show them
-
-    fun  Query(projection:Array<String>,selection:String,selectionArgs:Array<String>,sorOrder:String):Cursor{
-        val qb=SQLiteQueryBuilder()
+    //show all list of note
+    fun Query(projection:Array<String>, selection:String, selectionArg:Array<String> ,sortOrder:String):Cursor{
+        val qb = SQLiteQueryBuilder()
         qb.tables = tableName
-        val cursor=qb.query(sqlDB,projection,selection,selectionArgs,null,null,sorOrder)
-        return cursor
+        val cursor = qb.query(sqlDB,projection,selection,selectionArg,null,null,sortOrder)
+        return cursor!!
     }
-
-    //delete note
-    fun Delete(selection: String,selectionArgs: Array<String>):Int{
-        val dlt =sqlDB?.delete(tableName,selection,selectionArgs)
-        return dlt!!
+    //delete one note
+    fun Delete(selection: String,selectionArg: Array<String>):Int{
+        val count = sqlDB?.delete(tableName,selection,selectionArg)
+        return count!!
     }
-
-    //update note
-    fun Update(values: ContentValues,selection: String,selectionArgs: Array<String>):Int{
-        val updt = sqlDB?.update(tableName,values,selection,selectionArgs)
-        return updt!!
+    //update one note
+    fun Update(values: ContentValues,selection: String,selectionArg: Array<String>):Int{
+        val count = sqlDB?.update(tableName,values,selection,selectionArg)
+        return count!!
     }
-
-    //number of notes
-    fun count():Int{
+    //number of note items
+    fun Count():Int{
         val count = " SELECT * FROM $tableName"
         val cursor:Cursor =sqlDB!!.rawQuery(count,null)
         return cursor.count

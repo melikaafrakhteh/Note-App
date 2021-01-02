@@ -6,31 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/nearWhite"
-    tools:context=".MainFragment">
+    tools:context=".ui.MainFragment">
 
-
-    <TextView
-        android:id="@+id/tv_mainfragment_appname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="36dp"
-        android:fontFamily="@font/wintercandle"
-        android:text="@string/app_name"
-        android:textColor="@color/darkBlue"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recy_mainfragment_recyshowitems"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mainfragment_appname"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_mainfragment_addnewnote"

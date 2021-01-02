@@ -1,8 +1,9 @@
-package com.afrakhteh.noteapp
+package com.afrakhteh.noteapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager.LayoutParams.*
+import com.afrakhteh.noteapp.R
 
 class MainActivity : AppCompatActivity() {
 

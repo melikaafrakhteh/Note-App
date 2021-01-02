@@ -1,4 +1,4 @@
-package com.afrakhteh.noteapp
+package com.afrakhteh.noteapp.ui
 
 
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.fragment_adding_new_note.*
+import com.afrakhteh.noteapp.R
 import kotlinx.android.synthetic.main.fragment_empty_note.*
 
 /**

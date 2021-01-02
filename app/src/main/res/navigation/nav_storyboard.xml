@@ -7,34 +7,41 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.afrakhteh.noteapp.MainFragment"
+        android:name="com.afrakhteh.noteapp.ui.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_addingNewNoteFragment"
-            app:destination="@id/addingNewNoteFragment" />
+            app:destination="@id/addingNewNoteFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
         <action
             android:id="@+id/action_mainFragment_to_emptyNoteFragment"
             app:destination="@id/emptyNoteFragment" />
     </fragment>
     <fragment
         android:id="@+id/addingNewNoteFragment"
-        android:name="com.afrakhteh.noteapp.AddingNewNoteFragment"
+        android:name="com.afrakhteh.noteapp.ui.AddingNewNoteFragment"
         android:label="fragment_adding_new_note"
         tools:layout="@layout/fragment_adding_new_note" >
         <action
             android:id="@+id/action_addingNewNoteFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
         <argument
             android:name="titleedit"
             app:argType="string" />
         <argument
             android:name="desedit"
             app:argType="string" />
+        <argument
+            android:name="ID"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/emptyNoteFragment"
-        android:name="com.afrakhteh.noteapp.EmptyNoteFragment"
+        android:name="com.afrakhteh.noteapp.ui.EmptyNoteFragment"
         android:label="fragment_empty_note"
         tools:layout="@layout/fragment_empty_note" >
         <action

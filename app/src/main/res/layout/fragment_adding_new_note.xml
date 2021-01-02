@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/yellow"
-    tools:context=".AddingNewNoteFragment">
+    tools:context=".ui.AddingNewNoteFragment">
 
     <TextView
         android:id="@+id/textView_addingfrag_appname"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="84dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="text"
             android:hint="@string/title"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
